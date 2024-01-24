@@ -6,6 +6,7 @@ public class GameManager : MonoBehaviour
 {
     [SerializeField] private List<NeonRonios> neonRoniosList = new List<NeonRonios>();
     [SerializeField] private List<int> colorsSequence = new List<int>();
+    private int randomColor;
 
     public static GameManager instance;
     private void Awake()
@@ -14,20 +15,26 @@ public class GameManager : MonoBehaviour
         ColorRandom();
     }
 
-    public void TryDick(NeonRonios cliked) 
+    public void TryDick(NeonRonios cliked)
     {
-        foreach(var neonronio  in neonRoniosList)
+        foreach (var neonronio in neonRoniosList)
         {
             if (neonronio.idNeonronios == cliked.idNeonronios) return;
         }
+
         neonRoniosList.Add(cliked);
     }
 
     public void ColorRandom()
     {
-        for (int i = 0; i < 6; i++)
+        while (colorsSequence.Count < 6)
         {
-            colorsSequence.Add(Random.Range(0, 5)); 
+            int temp = (Random.Range(0, 6));
+
+            if (!colorsSequence.Contains(temp))
+            {
+                colorsSequence.Add(temp);
+            }
         }
     }
 }
