@@ -25,7 +25,7 @@ public class GameManager : MonoBehaviour
 
     public void ColorRandom()
     {
-        for (int i = 6; i > 0; i++)
+        for (int i = 0; i < 6; i++)
         {
             colorsSequence.Add(Random.Range(0, 5)); 
         }
