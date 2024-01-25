@@ -1,11 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
     [SerializeField] private List<NeonRonios> neonRoniosList = new List<NeonRonios>();
     [SerializeField] private List<int> colorsSequence = new List<int>();
+    [SerializeField] private List<int> sequeneCopy = new List<int>();
+
     public Transform newPosition;
     #region SINGLETON
 
@@ -23,6 +26,7 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         ColorRandom();
+        sequeneCopy = new List<int>(colorsSequence);
     }
 
     public void TryDick(NeonRonios cliked)
@@ -41,9 +45,11 @@ public class GameManager : MonoBehaviour
             {
                 neon.transform.position = neon.positionObj;
             }
+            colorsSequence = new List<int>(sequeneCopy);
+            //colorsSequence = sequeneCopy;
             Debug.Log("Objeto errado!");
+            
         }
-
     }
 
     public void ColorRandom()
