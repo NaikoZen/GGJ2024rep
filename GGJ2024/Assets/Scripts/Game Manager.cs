@@ -6,7 +6,6 @@ public class GameManager : MonoBehaviour
 {
     [SerializeField] private List<NeonRonios> neonRoniosList = new List<NeonRonios>();
     [SerializeField] private List<int> colorsSequence = new List<int>();
-    private int randomColor;
 
     public static GameManager instance;
     private void Awake()
@@ -17,12 +16,18 @@ public class GameManager : MonoBehaviour
 
     public void TryDick(NeonRonios cliked)
     {
-        foreach (var neonronio in neonRoniosList)
+        if (cliked.idNeonronios == colorsSequence[0])
         {
-            if (neonronio.idNeonronios == cliked.idNeonronios) return;
+            Debug.Log("Objeto correto");
+            colorsSequence.RemoveAt(0);
+            Destroy(cliked.gameObject);
         }
 
-        neonRoniosList.Add(cliked);
+        else
+        {
+            Debug.Log("Objeto errado!");
+        }
+
     }
 
     public void ColorRandom()
@@ -38,3 +43,4 @@ public class GameManager : MonoBehaviour
         }
     }
 }
+
