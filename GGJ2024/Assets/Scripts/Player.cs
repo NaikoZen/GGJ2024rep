@@ -11,8 +11,8 @@ public class Player : MonoBehaviour
     public float forcaPulo;
     public float gravidade;
 
-    public float yAxis;
-    public float xAxis;
+    //public float yAxis;
+    //public float xAxis;
 
     private CharacterController characterController;
     private Vector3 velocity;
@@ -28,8 +28,8 @@ public class Player : MonoBehaviour
     {
         if (Input.GetMouseButton(1)) // 1 representa o botão direito do mouse
         {
-            cineFreeLook.m_YAxis.m_MaxSpeed = yAxis;
-            cineFreeLook.m_XAxis.m_MaxSpeed = xAxis;
+            cineFreeLook.m_YAxis.m_MaxSpeed = 4;
+            cineFreeLook.m_XAxis.m_MaxSpeed = 500;
 
             Debug.Log("Botão direito do mouse pressionado");
         }
