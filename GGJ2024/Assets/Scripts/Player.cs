@@ -1,13 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Cinemachine;
 
 public class Player : MonoBehaviour
 {
+    public CinemachineFreeLook cineFreeLook;
     public Transform cameraTransform;
     public float velocidade;
     public float forcaPulo;
     public float gravidade;
+
+    public float yAxis;
+    public float xAxis;
 
     private CharacterController characterController;
     private Vector3 velocity;
@@ -21,6 +26,20 @@ public class Player : MonoBehaviour
 
     void Update()
     {
+        if (Input.GetMouseButton(1)) // 1 representa o botão direito do mouse
+        {
+            cineFreeLook.m_YAxis.m_MaxSpeed = yAxis;
+            cineFreeLook.m_XAxis.m_MaxSpeed = xAxis;
+
+            Debug.Log("Botão direito do mouse pressionado");
+        }
+        else
+        {
+            cineFreeLook.m_YAxis.m_MaxSpeed = 0;
+            cineFreeLook.m_XAxis.m_MaxSpeed = 0;
+        }
+
+
         if (cameraTransform != null)
         {
             DetectarChao();
