@@ -5,11 +5,37 @@ TagManager:
   serializedVersion: 2
   tags:
   - DropArea
+  - Cano
+  - Cano1
+  - Cano2
+  - Cano3
+  - Cano4
+  - Cano5
+  - Cano6
+  - Cano7
+  - Cano8
+  - Cano9
+  - Cano10
+  - Cano11
+  - Cano12
+  - DropArea1
+  - DropArea2
+  - DropArea3
+  - DropArea4
+  - DropArea5
+  - DropArea6
+  - DropArea7
+  - DropArea8
+  - DropArea9
+  - DropArea10
+  - DropArea11
+  - DropArea12
+  - Binguelo
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Object
   - Water
   - UI
   - 
