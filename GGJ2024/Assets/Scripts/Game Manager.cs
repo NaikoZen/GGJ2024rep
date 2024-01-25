@@ -6,11 +6,22 @@ public class GameManager : MonoBehaviour
 {
     [SerializeField] private List<NeonRonios> neonRoniosList = new List<NeonRonios>();
     [SerializeField] private List<int> colorsSequence = new List<int>();
+    public Transform newPosition;
+    #region SINGLETON
 
     public static GameManager instance;
     private void Awake()
     {
-        instance = this;
+        if (instance == null)
+        {
+            instance = this;
+        }
+    }
+
+    #endregion
+
+    private void Start()
+    {
         ColorRandom();
     }
 
@@ -20,11 +31,16 @@ public class GameManager : MonoBehaviour
         {
             Debug.Log("Objeto correto");
             colorsSequence.RemoveAt(0);
-            Destroy(cliked.gameObject);
+            cliked.gameObject.transform.position = newPosition.position;
+            neonRoniosList.Add(cliked);
         }
 
         else
         {
+            foreach (NeonRonios neon in neonRoniosList)
+            {
+                neon.transform.position = neon.positionObj;
+            }
             Debug.Log("Objeto errado!");
         }
 
@@ -43,4 +59,3 @@ public class GameManager : MonoBehaviour
         }
     }
 }
-
