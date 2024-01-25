@@ -6,7 +6,11 @@ public class DragDrop : MonoBehaviour
 {
     private Vector3 offset;
     private Camera mainCamera;
-    public string destinationTag = "DropArea";
+    private string canoTagPrefix = "Cano";
+    private string dropAreaTagPrefix = "DropArea";
+    private int correctDroped = 0;
+
+    public GameObject cilindroBadalo;
 
     private void Start()
     {
@@ -15,8 +19,11 @@ public class DragDrop : MonoBehaviour
 
     private void OnMouseDown()
     {
-        offset = transform.position - MouseWorldPosition();
-        transform.GetComponent<Collider>().enabled = false;
+        if (Input.GetMouseButtonDown(0))
+        {
+            offset = transform.position - MouseWorldPosition();
+            GetComponent<Collider>().enabled = false;
+        }
     }
 
     private void OnMouseDrag()
@@ -27,17 +34,41 @@ public class DragDrop : MonoBehaviour
 
     private void OnMouseUp()
     {
-        var rayOrigin = Camera.main.transform.position;
-        var rayDirection = MouseWorldPosition() - Camera.main.transform.position;
+        Ray ray = mainCamera.ScreenPointToRay(Input.mousePosition);
         RaycastHit hitInfo;
-        if(Physics.Raycast(rayOrigin, rayDirection, out hitInfo))
+
+        if (Physics.Raycast(ray, out hitInfo))
         {
-            if(hitInfo.transform.tag == destinationTag)
+            string dropAreaTag = hitInfo.transform.gameObject.tag;
+            string canoTag = gameObject.tag;
+
+            if (dropAreaTag.StartsWith(dropAreaTagPrefix) && canoTag.StartsWith(canoTagPrefix))
             {
-                transform.position = hitInfo.transform.position;
+                if (int.TryParse(dropAreaTag.Substring(dropAreaTagPrefix.Length), out int dropAreaNumber) &&
+                    int.TryParse(canoTag.Substring(canoTagPrefix.Length), out int canoNumber))
+                {
+                    if (dropAreaNumber == canoNumber)
+                    {
+                        transform.position = hitInfo.transform.position;
+                        correctDroped++;
+
+                        if (TodosCanosPosicionadosCorretamente())
+                        {
+                            if (cilindroBadalo != null)
+                            {
+                                cilindroBadalo.GetComponent<MeshRenderer>().enabled = true;
+                            }
+                        }
+                    }
+                }
+                else
+                {
+                    Debug.LogError("erro");
+                }
             }
         }
-        transform.GetComponent<Collider>().enabled = true;
+
+        GetComponent<Collider>().enabled = true;
     }
 
     private Vector3 MouseWorldPosition()
@@ -45,5 +76,10 @@ public class DragDrop : MonoBehaviour
         Vector3 mouseScreenPos = Input.mousePosition;
         mouseScreenPos.z = -mainCamera.transform.position.z;
         return mainCamera.ScreenToWorldPoint(mouseScreenPos);
+    }
+
+    private bool TodosCanosPosicionadosCorretamente()
+    {
+        return correctDroped == GameObject.FindGameObjectsWithTag(canoTagPrefix).Length;
     }
 }
