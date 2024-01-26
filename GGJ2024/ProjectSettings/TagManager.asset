@@ -31,6 +31,8 @@ TagManager:
   - DropArea11
   - DropArea12
   - Binguelo
+  - Cano13
+  - DropArea13
   layers:
   - Default
   - TransparentFX
