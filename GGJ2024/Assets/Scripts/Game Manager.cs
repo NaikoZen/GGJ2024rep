@@ -8,7 +8,6 @@ public class GameManager : MonoBehaviour
     [SerializeField] private List<NeonRonios> neonRoniosList = new List<NeonRonios>();
     [SerializeField] private List<int> colorsSequence = new List<int>();
     [SerializeField] private List<int> sequeneCopy = new List<int>();
-
     public Transform newPosition;
     #region SINGLETON
 
@@ -35,8 +34,9 @@ public class GameManager : MonoBehaviour
         {
             Debug.Log("Objeto correto");
             colorsSequence.RemoveAt(0);
-            cliked.gameObject.transform.position = newPosition.position;
+            //cliked.gameObject.transform.position = newPosition.position;
             neonRoniosList.Add(cliked);
+            cliked.emissionObj.gameObject.SetActive(true);
         }
 
         else
@@ -46,9 +46,8 @@ public class GameManager : MonoBehaviour
                 neon.transform.position = neon.positionObj;
             }
             colorsSequence = new List<int>(sequeneCopy);
-            //colorsSequence = sequeneCopy;
-            Debug.Log("Objeto errado!");
-            
+            cliked.emissionObj.gameObject.SetActive(false);
+            Debug.Log("Objeto errado!");           
         }
     }
 
