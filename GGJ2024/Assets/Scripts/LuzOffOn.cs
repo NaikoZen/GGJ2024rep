@@ -5,11 +5,11 @@ using UnityEngine;
 
 public class LuzOffOn : MonoBehaviour
 {
-    public DragDrop dragDrop;
+   // public DragDrop dragDrop;
+    public Animator animator;
 
+    // public static float canosConectados;
 
-   // public static float canosConectados;
-    
     // Guarde a referência do componente Light para evitar chamadas excessivas de GetComponent
     private Light luz;
 
@@ -34,11 +34,12 @@ public class LuzOffOn : MonoBehaviour
         // Verifica se a luz é nula para evitar erros
         if (luz != null)
         {
-            Debug.Log("Chegou aq");
+           // Debug.Log("Chegou aq");
             // Ativa a luz se a condição for atendida
-            if (DragDrop.canosConectados >= 12 )
+            if (DragDrop.canosConectados >= 1 )
             {
-                Debug.Log("Ligou");
+                animator.SetBool("Fechada", false);
+               // Debug.Log("Ligou");
                 luz.enabled = true;
             }
             // Desativa a luz se a condição não for atendida
