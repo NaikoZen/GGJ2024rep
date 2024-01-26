@@ -8,8 +8,7 @@ public class DragDrop : MonoBehaviour
     private Camera mainCamera;
     private string canoTagPrefix = "Cano";
     private string dropAreaTagPrefix = "DropArea";
-    private int correctDroped = 0;
-
+    private bool posicaoCorreta = false;
     public GameObject cilindroBadalo;
 
     private void Start()
@@ -50,20 +49,17 @@ public class DragDrop : MonoBehaviour
                     if (dropAreaNumber == canoNumber)
                     {
                         transform.position = hitInfo.transform.position;
-                        correctDroped++;
+                        posicaoCorreta = true;
 
                         if (TodosCanosPosicionadosCorretamente())
                         {
-                            if (cilindroBadalo != null)
-                            {
-                                cilindroBadalo.GetComponent<MeshRenderer>().enabled = true;
-                            }
+                            AtivarMeshRendererCilindroBadalo();
                         }
                     }
                 }
                 else
                 {
-                    Debug.LogError("erro");
+                    Debug.LogError("Erro na conversão.");
                 }
             }
         }
@@ -80,6 +76,22 @@ public class DragDrop : MonoBehaviour
 
     private bool TodosCanosPosicionadosCorretamente()
     {
-        return correctDroped == GameObject.FindGameObjectsWithTag(canoTagPrefix).Length;
+        DragDrop[] canos = FindObjectsOfType<DragDrop>();
+        foreach (DragDrop cano in canos)
+        {
+            if (!cano.posicaoCorreta)
+            {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    private void AtivarMeshRendererCilindroBadalo()
+    {
+        if (cilindroBadalo != null)
+        {
+            cilindroBadalo.GetComponent<MeshRenderer>().enabled = true;
+        }
     }
 }
