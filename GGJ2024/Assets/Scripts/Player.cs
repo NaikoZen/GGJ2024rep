@@ -30,8 +30,6 @@ public class Player : MonoBehaviour
         {
             cineFreeLook.m_YAxis.m_MaxSpeed = 4;
             cineFreeLook.m_XAxis.m_MaxSpeed = 500;
-
-            Debug.Log("Botão direito do mouse pressionado");
         }
         else
         {
