@@ -12,6 +12,9 @@ EditorBuildSettings:
     path: Assets/Scenes/NoGame/Game.unity
     guid: e5be4394b30a6f846b4604c56965943d
   - enabled: 1
+    path: Assets/Scenes/GameKallebe.unity
+    guid: cfe384c44f0ca6f4987bfb8264c38f6b
+  - enabled: 1
     path: Assets/Scenes/NoGame/Creditos.unity
     guid: 27896ddc7feeb434593362441646a73e
   - enabled: 1
