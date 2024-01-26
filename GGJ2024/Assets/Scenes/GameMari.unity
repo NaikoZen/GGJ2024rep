@@ -2069,7 +2069,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 876310867}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.16972998, y: 0.14051759, z: -0.024458716, w: 0.9751145}
+  m_LocalRotation: {x: 0.16972996, y: 0.14051755, z: -0.024458705, w: 0.9751145}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -4171,7 +4171,6 @@ MonoBehaviour:
   neonRoniosList: []
   colorsSequence: 
   sequeneCopy: 
-  myMaterial: {fileID: 2100000, guid: cde8b02ebad976548be6c09a4bad5c54, type: 2}
   newPosition: {fileID: 2022748967}
 --- !u!4 &1655752008
 Transform:
@@ -5049,7 +5048,7 @@ Camera:
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_RenderingPath: -1
+  m_RenderingPath: 3
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
   m_TargetEye: 3
@@ -5068,7 +5067,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2058047163}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.16973, y: 0.1405176, z: -0.024458718, w: 0.9751145}
+  m_LocalRotation: {x: 0.16972998, y: 0.14051753, z: -0.024458703, w: 0.9751145}
   m_LocalPosition: {x: -2.1234422, y: 5.8999996, z: -16.613132}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0

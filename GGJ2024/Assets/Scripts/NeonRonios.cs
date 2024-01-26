@@ -1,3 +1,4 @@
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -6,7 +7,9 @@ using UnityEngine.EventSystems;
 public class NeonRonios : MonoBehaviour, IPointerDownHandler
 {
     public int idNeonronios;
-    [SerializeField] private GameObject emissionObj;
+    //[SerializeField] private GameObject emissionObj;
+    public GameObject emissionObj;
+
     public Vector3 positionObj;
     public void OnPointerDown(PointerEventData eventData)
     {
@@ -19,9 +22,9 @@ public class NeonRonios : MonoBehaviour, IPointerDownHandler
         positionObj = transform.position;
         //emissionObj.SetActive(false);
     }
-    
-    public void EnableLight(bool enable)
+
+    public void enablelight(bool enable)
     {
-        emissionObj.SetActive(true);
+        emissionObj.SetActive(enable);
     }
 }
