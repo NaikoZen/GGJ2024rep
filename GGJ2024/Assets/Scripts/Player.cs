@@ -19,6 +19,8 @@ public class Player : MonoBehaviour
 
     private bool estaNoChao;
 
+    public Animator animator;
+
     void Start()
     {
         characterController = GetComponent<CharacterController>();
@@ -36,7 +38,6 @@ public class Player : MonoBehaviour
             cineFreeLook.m_YAxis.m_MaxSpeed = 0;
             cineFreeLook.m_XAxis.m_MaxSpeed = 0;
         }
-
 
         if (cameraTransform != null)
         {
@@ -59,7 +60,17 @@ public class Player : MonoBehaviour
             }
 
             AplicarGravidade();
+
+            if (h != 0f || v != 0f)
+            {
+                animator.SetBool("Walk", true);
+            }
+            else
+            {
+                animator.SetBool("Walk", false);
+            }
         }
+
     }
 
     void Movimentar(Vector3 direcao)
