@@ -1,97 +1,49 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Cinemachine;
 
 public class DragDrop : MonoBehaviour
 {
-    private Vector3 offset;
-    private Camera mainCamera;
-    private string canoTagPrefix = "Cano";
-    private string dropAreaTagPrefix = "DropArea";
-    private bool posicaoCorreta = false;
-    public GameObject cilindroBadalo;
-
-    private void Start()
-    {
-        mainCamera = Camera.main;
-    }
+    Vector3 offset;
+    public string destinationTag = "DropArea";
 
     private void OnMouseDown()
     {
-        if (Input.GetMouseButtonDown(0))
-        {
-            offset = transform.position - MouseWorldPosition();
-            GetComponent<Collider>().enabled = false;
-        }
+        offset = transform.position - MouseWorldPosition();
+        transform.GetComponent<Collider>().enabled = false;
     }
 
-    private void OnMouseDrag()
+    void OnMouseDrag()
     {
-        Vector3 targetPosition = MouseWorldPosition() + offset;
-        transform.position = targetPosition;
+        transform.position = MouseWorldPosition() + offset;
     }
 
-    private void OnMouseUp()
+    void OnMouseUp()
     {
-        Ray ray = mainCamera.ScreenPointToRay(Input.mousePosition);
+        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         RaycastHit hitInfo;
 
         if (Physics.Raycast(ray, out hitInfo))
         {
-            string dropAreaTag = hitInfo.transform.gameObject.tag;
-            string canoTag = gameObject.tag;
-
-            if (dropAreaTag.StartsWith(dropAreaTagPrefix) && canoTag.StartsWith(canoTagPrefix))
+            if (hitInfo.transform.CompareTag(destinationTag))
             {
-                if (int.TryParse(dropAreaTag.Substring(dropAreaTagPrefix.Length), out int dropAreaNumber) &&
-                    int.TryParse(canoTag.Substring(canoTagPrefix.Length), out int canoNumber))
-                {
-                    if (dropAreaNumber == canoNumber)
-                    {
-                        transform.position = hitInfo.transform.position;
-                        posicaoCorreta = true;
-
-                        if (TodosCanosPosicionadosCorretamente())
-                        {
-                            AtivarMeshRendererCilindroBadalo();
-                        }
-                    }
-                }
-                else
-                {
-                    Debug.LogError("Erro na conversão.");
-                }
+                transform.position = hitInfo.point;
             }
         }
-
-        GetComponent<Collider>().enabled = true;
+        transform.GetComponent<Collider>().enabled = true;
     }
 
-    private Vector3 MouseWorldPosition()
+    Vector3 MouseWorldPosition()
     {
-        Vector3 mouseScreenPos = Input.mousePosition;
-        mouseScreenPos.z = -mainCamera.transform.position.z;
-        return mainCamera.ScreenToWorldPoint(mouseScreenPos);
-    }
+        Ray mouseRay = Camera.main.ScreenPointToRay(Input.mousePosition);
+        RaycastHit hit;
 
-    private bool TodosCanosPosicionadosCorretamente()
-    {
-        DragDrop[] canos = FindObjectsOfType<DragDrop>();
-        foreach (DragDrop cano in canos)
+        if (Physics.Raycast(mouseRay, out hit))
         {
-            if (!cano.posicaoCorreta)
-            {
-                return false;
-            }
+            return hit.point;
         }
-        return true;
-    }
 
-    private void AtivarMeshRendererCilindroBadalo()
-    {
-        if (cilindroBadalo != null)
-        {
-            cilindroBadalo.GetComponent<MeshRenderer>().enabled = true;
-        }
+        return Vector3.zero; // Pode ser necessário ajustar esse valor de retorno, dependendo do contexto.
     }
 }
