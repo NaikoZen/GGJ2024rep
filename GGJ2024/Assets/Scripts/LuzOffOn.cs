@@ -9,7 +9,7 @@ public class LuzOffOn : MonoBehaviour
     public Animator animator;
 
     // public static float canosConectados;
-
+    Collider colliderporta;
     // Guarde a referência do componente Light para evitar chamadas excessivas de GetComponent
     private Light luz;
 

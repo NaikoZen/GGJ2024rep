@@ -43,6 +43,6 @@ public class TimerController : MonoBehaviour
 
     void GameOver()
     {
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene("GameKallebe");
     }
 }

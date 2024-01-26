@@ -7,8 +7,16 @@ public class DragDrop : MonoBehaviour
     Vector3 offset;
     public string dropAreaTag; // Tag da DropArea associada a este objeto
     private MeshRenderer meshRenderer;
-    public static float canosConectados;
+    public static int canosConectados;
 
+    public static DragDrop instance;
+    private void Awake()
+    {
+        if (instance == null)
+        {
+            instance = this;
+        }
+    }
     private void Start()
     {
         meshRenderer = GetComponent<MeshRenderer>();
