@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
+    public static int luzesAcesas;
     [SerializeField] private List<NeonRonios> neonRoniosList = new List<NeonRonios>();
     [SerializeField] private List<int> colorsSequence = new List<int>();
     [SerializeField] private List<int> sequeneCopy = new List<int>();
@@ -33,7 +34,10 @@ public class GameManager : MonoBehaviour
     {
         if (cliked.idNeonronios == colorsSequence[0] && Input.GetMouseButton(0)) 
         {
+            luzesAcesas++;
+            Debug.Log(luzesAcesas);
             Debug.Log("Objeto correto");
+
             colorsSequence.RemoveAt(0);
             neonRoniosList.Add(cliked);
             cliked.emissionObj.gameObject.SetActive(true);
@@ -45,6 +49,8 @@ public class GameManager : MonoBehaviour
             {
                 neon.Enablelight(false);
             }
+            luzesAcesas = 0;
+            Debug.Log(luzesAcesas);
             colorsSequence = new List<int>(sequeneCopy);
             //cliked.emissionObj.gameObject.SetActive(false);
             Debug.Log("Objeto errado!");           
