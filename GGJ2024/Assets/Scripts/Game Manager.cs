@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
@@ -21,7 +22,11 @@ public class GameManager : MonoBehaviour
             instance = this;
         }
     }
+    void Update()
+    {
+       
 
+    }
     #endregion
 
     private void Start()
