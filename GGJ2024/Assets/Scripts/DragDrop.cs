@@ -1,40 +1,56 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using Cinemachine;
 
 public class DragDrop : MonoBehaviour
 {
     Vector3 offset;
-    public string destinationTag = "DropArea";
+    public string dropAreaTag; // Tag da DropArea associada a este objeto
+    private MeshRenderer meshRenderer;
+
+    private void Start()
+    {
+        meshRenderer = GetComponent<MeshRenderer>();
+    }
 
     private void OnMouseDown()
     {
         offset = transform.position - MouseWorldPosition();
-        transform.GetComponent<Collider>().enabled = false;
+        GetComponent<Collider>().enabled = false;
     }
 
-    void OnMouseDrag()
+    private void OnMouseDrag()
     {
         transform.position = MouseWorldPosition() + offset;
     }
 
-    void OnMouseUp()
+    private void OnMouseUp()
     {
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         RaycastHit hitInfo;
 
         if (Physics.Raycast(ray, out hitInfo))
         {
-            if (hitInfo.transform.CompareTag(destinationTag))
+            if (hitInfo.transform.CompareTag(dropAreaTag))
             {
+                // Desativa o MeshRenderer do "Cano"
+                meshRenderer.enabled = false;
+
+                // Ativa o MeshRenderer da DropArea
+                MeshRenderer dropAreaRenderer = hitInfo.transform.GetComponent<MeshRenderer>();
+                if (dropAreaRenderer != null)
+                {
+                    dropAreaRenderer.enabled = true;
+                }
+
                 transform.position = hitInfo.point;
             }
         }
-        transform.GetComponent<Collider>().enabled = true;
+
+        GetComponent<Collider>().enabled = true;
     }
 
-    Vector3 MouseWorldPosition()
+    private Vector3 MouseWorldPosition()
     {
         Ray mouseRay = Camera.main.ScreenPointToRay(Input.mousePosition);
         RaycastHit hit;
@@ -44,6 +60,6 @@ public class DragDrop : MonoBehaviour
             return hit.point;
         }
 
-        return Vector3.zero; // Pode ser necessário ajustar esse valor de retorno, dependendo do contexto.
+        return Vector3.zero;
     }
 }
