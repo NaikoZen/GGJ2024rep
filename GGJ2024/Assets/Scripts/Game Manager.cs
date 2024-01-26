@@ -31,7 +31,7 @@ public class GameManager : MonoBehaviour
 
     public void TryDick(NeonRonios cliked)
     {
-        if (cliked.idNeonronios == colorsSequence[0])
+        if (cliked.idNeonronios == colorsSequence[0] && Input.GetMouseButton(0)) 
         {
             Debug.Log("Objeto correto");
             colorsSequence.RemoveAt(0);
@@ -39,14 +39,14 @@ public class GameManager : MonoBehaviour
             cliked.emissionObj.gameObject.SetActive(true);
         }
         
-        else
+        else if (cliked.idNeonronios != colorsSequence[0] && Input.GetMouseButton(0))
         {
             foreach (NeonRonios neon in neonRoniosList)
             {
-                neon.enablelight(false);
+                neon.Enablelight(false);
             }
             colorsSequence = new List<int>(sequeneCopy);
-            cliked.emissionObj.gameObject.SetActive(false);
+            //cliked.emissionObj.gameObject.SetActive(false);
             Debug.Log("Objeto errado!");           
         }
     }

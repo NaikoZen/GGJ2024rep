@@ -23,7 +23,7 @@ public class NeonRonios : MonoBehaviour, IPointerDownHandler
         //emissionObj.SetActive(false);
     }
 
-    public void enablelight(bool enable)
+    public void Enablelight(bool enable)
     {
         emissionObj.SetActive(enable);
     }
