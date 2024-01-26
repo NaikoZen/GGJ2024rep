@@ -38,7 +38,7 @@ public class GameManager : MonoBehaviour
             neonRoniosList.Add(cliked);
             //cliked.emissionObj.gameObject.SetActive(true);
         }
-
+        
         else
         {
             foreach (NeonRonios neon in neonRoniosList)

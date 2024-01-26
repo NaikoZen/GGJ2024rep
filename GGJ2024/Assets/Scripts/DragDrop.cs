@@ -7,6 +7,7 @@ public class DragDrop : MonoBehaviour
     Vector3 offset;
     public string dropAreaTag; // Tag da DropArea associada a este objeto
     private MeshRenderer meshRenderer;
+    public static float canosConectados;
 
     private void Start()
     {
@@ -35,7 +36,8 @@ public class DragDrop : MonoBehaviour
             {
                 // Desativa o MeshRenderer do "Cano"
                 meshRenderer.enabled = false;
-
+                canosConectados++;
+                Debug.Log(canosConectados);
                 // Ativa o MeshRenderer da DropArea
                 MeshRenderer dropAreaRenderer = hitInfo.transform.GetComponent<MeshRenderer>();
                 if (dropAreaRenderer != null)
