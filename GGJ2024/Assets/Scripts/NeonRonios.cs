@@ -6,6 +6,7 @@ using UnityEngine.EventSystems;
 public class NeonRonios : MonoBehaviour, IPointerDownHandler
 {
     public int idNeonronios;
+    [SerializeField] private GameObject emissionObj;
     public Vector3 positionObj;
     public void OnPointerDown(PointerEventData eventData)
     {
@@ -16,11 +17,11 @@ public class NeonRonios : MonoBehaviour, IPointerDownHandler
     void Start()
     {
         positionObj = transform.position;
+        //emissionObj.SetActive(false);
     }
-
-    // Update is called once per frame
-    void Update()
+    
+    public void EnableLight(bool enable)
     {
-        
+        emissionObj.SetActive(true);
     }
 }
