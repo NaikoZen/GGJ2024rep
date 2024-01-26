@@ -7,6 +7,21 @@ public class ChangeScene : MonoBehaviour
 {
     public void LoadScene(string cena)
     {
-        SceneManager.LoadScene(cena);
+        SceneManager.LoadScene("GameKallebe");
+    }
+
+    public void Voltar(string cena)
+    {
+        SceneManager.LoadScene("Menu");
+    }
+
+    public void Creditos(string cena)
+    {
+        SceneManager.LoadScene("Creditos");
+    }
+
+    public void Sair(string cena)
+    {
+       // SceneManager.LoadScene("GameKallebe");
     }
 }
