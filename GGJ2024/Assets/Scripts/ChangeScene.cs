@@ -7,7 +7,13 @@ public class ChangeScene : MonoBehaviour
 {
     public void LoadScene(string cena)
     {
-        SceneManager.LoadScene("Game");
+
+
+        GameManager.luzesAcesas = 0;
+        DragDrop.canosConectados = 0;
+        Vencer.porta = 0;
+        SceneManager.LoadScene("GameKallebe");
+
     }
 
     public void Voltar(string cena)

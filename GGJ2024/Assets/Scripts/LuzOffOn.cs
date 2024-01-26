@@ -38,14 +38,19 @@ public class LuzOffOn : MonoBehaviour
             // Ativa a luz se a condição for atendida
             if (DragDrop.canosConectados >= 1 )
             {
-                animator.SetBool("Fechada", false);
                // Debug.Log("Ligou");
                 luz.enabled = true;
             }
             // Desativa a luz se a condição não for atendida
-            else if (DragDrop.canosConectados < 12 )
+            if (GameManager.luzesAcesas == 1 && DragDrop.canosConectados == 1)
             {
-                luz.enabled = false;
+                if (Vencer.porta < 1)
+                {
+                    animator.SetBool("Fechada", false);
+                    luz.enabled = true;
+                    Debug.Log("Venceu");
+                }
+               
             }
         }
     }
