@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class Vencer : MonoBehaviour
 {
+    public static int porta;
     public Animator animator;
     // Start is called before the first frame update
     void Start()
@@ -22,6 +23,7 @@ public class Vencer : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
+            porta = 1;
             Debug.Log("tocou");
             animator.SetBool("Fechada", true);
             Invoke("TrocadeCena", 3f);
@@ -32,6 +34,10 @@ public class Vencer : MonoBehaviour
 
     void TrocadeCena()
     {
+        
+        GameManager.luzesAcesas = 0;
+        DragDrop.canosConectados = 0;
+        Vencer.porta = 0;
         SceneManager.LoadScene("GameKallebe");
     }
 
