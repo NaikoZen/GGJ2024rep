@@ -276,6 +276,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   idNeonronios: 4
+  emissionObj: {fileID: 0}
   positionObj: {x: 0, y: 0, z: 0}
 --- !u!65 &91175903
 BoxCollider:
@@ -732,7 +733,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a86744323a00f24896edee3d1c984b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cilindroBadalo: {fileID: 0}
+  cilindroBadalo: {fileID: 375737698}
 --- !u!136 &157230498
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -853,7 +854,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a86744323a00f24896edee3d1c984b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cilindroBadalo: {fileID: 0}
+  cilindroBadalo: {fileID: 375737698}
 --- !u!136 &175628875
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -974,7 +975,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a86744323a00f24896edee3d1c984b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cilindroBadalo: {fileID: 0}
+  cilindroBadalo: {fileID: 375737698}
 --- !u!136 &227245543
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -1305,7 +1306,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a86744323a00f24896edee3d1c984b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cilindroBadalo: {fileID: 0}
+  cilindroBadalo: {fileID: 375737698}
 --- !u!136 &309347309
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -1585,7 +1586,7 @@ Transform:
   m_GameObject: {fileID: 375737698}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 20.7997, y: 5.29, z: -5.199957}
+  m_LocalPosition: {x: 16.61, y: 2.15, z: -5.56}
   m_LocalScale: {x: 0.8794, y: 0.6626, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2269,6 +2270,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   idNeonronios: 3
+  emissionObj: {fileID: 0}
   positionObj: {x: 0, y: 0, z: 0}
 --- !u!65 &574291248
 BoxCollider:
@@ -2388,7 +2390,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a86744323a00f24896edee3d1c984b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cilindroBadalo: {fileID: 0}
+  cilindroBadalo: {fileID: 375737698}
 --- !u!136 &585934806
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -2820,7 +2822,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a86744323a00f24896edee3d1c984b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cilindroBadalo: {fileID: 0}
+  cilindroBadalo: {fileID: 375737698}
 --- !u!136 &644863487
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -2941,7 +2943,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a86744323a00f24896edee3d1c984b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cilindroBadalo: {fileID: 0}
+  cilindroBadalo: {fileID: 375737698}
 --- !u!136 &656441575
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -3063,6 +3065,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   idNeonronios: 0
+  emissionObj: {fileID: 0}
   positionObj: {x: 0, y: 0, z: 0}
 --- !u!65 &663563024
 BoxCollider:
@@ -3381,7 +3384,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a86744323a00f24896edee3d1c984b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cilindroBadalo: {fileID: 0}
+  cilindroBadalo: {fileID: 375737698}
 --- !u!136 &748340401
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -3818,6 +3821,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   idNeonronios: 5
+  emissionObj: {fileID: 0}
   positionObj: {x: 0, y: 0, z: 0}
 --- !u!65 &1021325137
 BoxCollider:
@@ -4550,7 +4554,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a86744323a00f24896edee3d1c984b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cilindroBadalo: {fileID: 0}
+  cilindroBadalo: {fileID: 375737698}
 --- !u!136 &1251903838
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -4776,7 +4780,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a86744323a00f24896edee3d1c984b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cilindroBadalo: {fileID: 0}
+  cilindroBadalo: {fileID: 375737698}
 --- !u!136 &1383013839
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -5108,6 +5112,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   idNeonronios: 1
+  emissionObj: {fileID: 0}
   positionObj: {x: 0, y: 0, z: 0}
 --- !u!65 &1539332725
 BoxCollider:
@@ -5567,6 +5572,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   idNeonronios: 2
+  emissionObj: {fileID: 0}
   positionObj: {x: 0, y: 0, z: 0}
 --- !u!65 &1718059954
 BoxCollider:
@@ -5815,7 +5821,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1794595173}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.0681656, y: 0.8854151, z: -0.13757318, w: 0.4387109}
+  m_LocalRotation: {x: 0.06816561, y: 0.8854151, z: -0.13757318, w: 0.4387109}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -5870,7 +5876,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a86744323a00f24896edee3d1c984b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cilindroBadalo: {fileID: 0}
+  cilindroBadalo: {fileID: 375737698}
 --- !u!136 &1840620433
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -6167,7 +6173,7 @@ GameObject:
   - component: {fileID: 1863101525}
   - component: {fileID: 1863101528}
   m_Layer: 0
-  m_Name: Quad
+  m_Name: Quad (13)
   m_TagString: DropArea13
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6743,7 +6749,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a86744323a00f24896edee3d1c984b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cilindroBadalo: {fileID: 0}
+  cilindroBadalo: {fileID: 375737698}
 --- !u!136 &2057894023
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -7120,7 +7126,7 @@ GameObject:
   - component: {fileID: 2132277477}
   - component: {fileID: 2132277476}
   m_Layer: 3
-  m_Name: Cano
+  m_Name: Cano (13)
   m_TagString: Cano13
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7153,7 +7159,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a86744323a00f24896edee3d1c984b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cilindroBadalo: {fileID: 0}
+  cilindroBadalo: {fileID: 375737698}
 --- !u!136 &2132277477
 CapsuleCollider:
   m_ObjectHideFlags: 0

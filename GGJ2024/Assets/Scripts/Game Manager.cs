@@ -36,7 +36,7 @@ public class GameManager : MonoBehaviour
             colorsSequence.RemoveAt(0);
             //cliked.gameObject.transform.position = newPosition.position;
             neonRoniosList.Add(cliked);
-            cliked.emissionObj.gameObject.SetActive(true);
+           // cliked.emissionObj.gameObject.SetActive(true);
         }
 
         else
@@ -46,7 +46,7 @@ public class GameManager : MonoBehaviour
                 neon.transform.position = neon.positionObj;
             }
             colorsSequence = new List<int>(sequeneCopy);
-            cliked.emissionObj.gameObject.SetActive(false);
+            // cliked.emissionObj.gameObject.SetActive(false);
             Debug.Log("Objeto errado!");           
         }
     }
