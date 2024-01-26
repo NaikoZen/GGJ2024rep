@@ -321,7 +321,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a86744323a00f24896edee3d1c984b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  destinationTag: DropArea
+  dropAreaTag: DropArea10
 --- !u!1 &50742346 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -516098083770646512, guid: 2e957e6662fd67c409613529b1305965, type: 3}
@@ -962,7 +962,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a86744323a00f24896edee3d1c984b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  destinationTag: DropArea
+  dropAreaTag: 
 --- !u!136 &157230498
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -1083,7 +1083,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a86744323a00f24896edee3d1c984b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  destinationTag: DropArea
+  dropAreaTag: 
 --- !u!136 &175628875
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -1302,7 +1302,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a86744323a00f24896edee3d1c984b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  destinationTag: DropArea
+  dropAreaTag: DropArea5
 --- !u!1 &227245540
 GameObject:
   m_ObjectHideFlags: 0
@@ -1350,7 +1350,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a86744323a00f24896edee3d1c984b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  destinationTag: DropArea
+  dropAreaTag: 
 --- !u!136 &227245543
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -1594,7 +1594,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a86744323a00f24896edee3d1c984b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  destinationTag: DropArea
+  dropAreaTag: DropArea3
 --- !u!1 &271720790 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -5063223942988036812, guid: 2e957e6662fd67c409613529b1305965, type: 3}
@@ -1873,7 +1873,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a86744323a00f24896edee3d1c984b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  destinationTag: DropArea
+  dropAreaTag: DropArea7
 --- !u!1 &309347306
 GameObject:
   m_ObjectHideFlags: 0
@@ -1921,7 +1921,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a86744323a00f24896edee3d1c984b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  destinationTag: DropArea
+  dropAreaTag: 
 --- !u!136 &309347309
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -2917,7 +2917,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a86744323a00f24896edee3d1c984b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  destinationTag: DropArea
+  dropAreaTag: DropArea12
 --- !u!1 &453938001
 GameObject:
   m_ObjectHideFlags: 3
@@ -3653,7 +3653,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a86744323a00f24896edee3d1c984b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  destinationTag: DropArea
+  dropAreaTag: 
 --- !u!136 &585934806
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -4085,7 +4085,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a86744323a00f24896edee3d1c984b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  destinationTag: DropArea
+  dropAreaTag: 
 --- !u!136 &644863487
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -4259,7 +4259,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a86744323a00f24896edee3d1c984b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  destinationTag: DropArea
+  dropAreaTag: 
 --- !u!136 &656441575
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -4836,7 +4836,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a86744323a00f24896edee3d1c984b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  destinationTag: DropArea
+  dropAreaTag: 
 --- !u!136 &748340401
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -5057,7 +5057,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a86744323a00f24896edee3d1c984b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  destinationTag: DropArea
+  dropAreaTag: DropArea13
 --- !u!1 &877419994
 GameObject:
   m_ObjectHideFlags: 0
@@ -6683,7 +6683,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a86744323a00f24896edee3d1c984b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  destinationTag: DropArea
+  dropAreaTag: 
 --- !u!136 &1251903838
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -6962,7 +6962,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a86744323a00f24896edee3d1c984b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  destinationTag: DropArea
+  dropAreaTag: 
 --- !u!136 &1383013839
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -7261,7 +7261,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a86744323a00f24896edee3d1c984b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  destinationTag: DropArea
+  dropAreaTag: DropArea4
 --- !u!1 &1511087039 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -8391222552659086748, guid: 2e957e6662fd67c409613529b1305965, type: 3}
@@ -7898,7 +7898,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a86744323a00f24896edee3d1c984b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  destinationTag: DropArea
+  dropAreaTag: DropArea2
 --- !u!1 &1644479414
 GameObject:
   m_ObjectHideFlags: 0
@@ -8202,7 +8202,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a86744323a00f24896edee3d1c984b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  destinationTag: DropArea
+  dropAreaTag: DropArea1
 --- !u!1 &1718059951
 GameObject:
   m_ObjectHideFlags: 0
@@ -8348,8 +8348,8 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 0.008486228
-  m_Center: {x: -0.027600132, y: -0.08810742, z: 0.037949536}
+  m_Radius: 0.009893967
+  m_Center: {x: -0.027600132, y: -0.08810742, z: 0.03654183}
 --- !u!1 &1737111959 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6897072526277454241, guid: 2e957e6662fd67c409613529b1305965, type: 3}
@@ -8416,7 +8416,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a86744323a00f24896edee3d1c984b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  destinationTag: DropArea
+  dropAreaTag: DropArea6
 --- !u!1 &1748125807
 GameObject:
   m_ObjectHideFlags: 0
@@ -8721,7 +8721,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a86744323a00f24896edee3d1c984b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  destinationTag: DropArea
+  dropAreaTag: DropArea11
 --- !u!1 &1840620430
 GameObject:
   m_ObjectHideFlags: 0
@@ -8769,7 +8769,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a86744323a00f24896edee3d1c984b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  destinationTag: DropArea
+  dropAreaTag: 
 --- !u!136 &1840620433
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -9014,7 +9014,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a86744323a00f24896edee3d1c984b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  destinationTag: DropArea
+  dropAreaTag: DropArea9
 --- !u!1 &1853959579 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -3590349239161715947, guid: 2e957e6662fd67c409613529b1305965, type: 3}
@@ -9755,7 +9755,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a86744323a00f24896edee3d1c984b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  destinationTag: DropArea
+  dropAreaTag: DropArea8
 --- !u!1 &2027204606 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -844254489292832659, guid: 2e957e6662fd67c409613529b1305965, type: 3}
@@ -10072,7 +10072,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a86744323a00f24896edee3d1c984b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  destinationTag: DropArea
+  dropAreaTag: 
 --- !u!136 &2057894023
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -10865,7 +10865,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6343035939402754248, guid: 8adc370988c0dad4ab1d51bf2cad2ae8, type: 3}
       propertyPath: m_TagString
-      value: Cano8
+      value: DropArea8
       objectReference: {fileID: 0}
     - target: {fileID: 7831391185407685268, guid: 8adc370988c0dad4ab1d51bf2cad2ae8, type: 3}
       propertyPath: m_Enabled
@@ -11110,7 +11110,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a86744323a00f24896edee3d1c984b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  destinationTag: DropArea
+  dropAreaTag: 
 --- !u!136 &2132277477
 CapsuleCollider:
   m_ObjectHideFlags: 0
