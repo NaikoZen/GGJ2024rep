@@ -7,10 +7,13 @@ public class ChangeScene : MonoBehaviour
 {
     public void LoadScene(string cena)
     {
+
+
         GameManager.luzesAcesas = 0;
         DragDrop.canosConectados = 0;
         Vencer.porta = 0;
         SceneManager.LoadScene("GameKallebe");
+
     }
 
     public void Voltar(string cena)
@@ -23,8 +26,13 @@ public class ChangeScene : MonoBehaviour
         SceneManager.LoadScene("Creditos");
     }
 
+    public void Tutorial(string cena)
+    {
+        SceneManager.LoadScene("Tutorial");
+    }
+
     public void Sair(string cena)
     {
-       // SceneManager.LoadScene("GameKallebe");
+        Application.Quit();
     }
 }
