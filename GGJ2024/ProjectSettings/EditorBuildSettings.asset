@@ -18,9 +18,15 @@ EditorBuildSettings:
     path: Assets/Scenes/NoGame/Tutorial.unity
     guid: a9d4602609077424e91962bf1a73c71e
   - enabled: 1
+    path: Assets/Scenes/NoGame/V Cut.unity
+    guid: 3b52cc038d9ad0140836b99d97d1404f
+  - enabled: 1
+    path: Assets/Scenes/NoGame/D Cut.unity
+    guid: f9426eba46c18af4f8697c50639d9d4a
+  - enabled: 0
     path: Assets/Scenes/NoGame/Defeat.unity
     guid: b7247666f8d4db2489c604169d063c79
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/NoGame/Victory.unity
     guid: 67a6825dd391d0440b15dd139085b859
   m_configObjects: {}
