@@ -12,7 +12,7 @@ public class ChangeScene : MonoBehaviour
         GameManager.luzesAcesas = 0;
         DragDrop.canosConectados = 0;
         Vencer.porta = 0;
-        SceneManager.LoadScene("GameKallebe");
+        SceneManager.LoadScene("GamePause");
 
     }
 
